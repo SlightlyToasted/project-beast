@@ -1,4 +1,4 @@
-extends Node3D
+extends RigidBody3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,11 +9,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("up"):
-		position.y += 2*delta
+		apply_central_force(basis.y * delta * 1000)
 
 	if Input.is_action_pressed("left"):
-		rotate_z(delta) #rotate counterclockwise
+		apply_torque(Vector3(0.0, 0.0, delta*100.0)) #rotate counterclockwise
 		
 	if Input.is_action_pressed("right"):
-		rotate_z(-delta) #rotate counterclockwise
-		
+		apply_torque(Vector3(0.0, 0.0, -delta*100.0))
+	

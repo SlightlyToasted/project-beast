@@ -1,2 +1,4 @@
+CollisionShape3D
+RigidBody3D
 Camera3D
 CSGBox3D
