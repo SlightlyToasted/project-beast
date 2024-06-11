@@ -2,3 +2,6 @@ res://Scenes/player.tscn
 res://Scripts/Player.gd
 res://Scenes/level.tscn
 res://Scenes/Level/level.tscn
+res://Scenes/Level/LandingPad.gd
+res://Scenes/Level/level_2.tscn
+res://Scenes/Level/level_3.tscn
